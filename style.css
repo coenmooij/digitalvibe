@@ -221,22 +221,26 @@ footer {
 .cloud-wrapper {
     position: fixed;
     top: 10%;
+    left: -50%;
     transform: scale(.69);
-    animation: animateCloud 50s linear infinite;
+    animation: animateCloud 60s linear infinite;
+    animation-delay: 4s;
 }
 
 .cloud-wrapper2 {
     position: fixed;
     top: 12%;
+    left: -50%;
     transform: scale(.42);
     animation: animateCloud 40s linear infinite;
+    animation-delay: 2s;
 }
 
 .cloud-wrapper3 {
     position: fixed;
     top: 15%;
     transform: scale(.56);
-    animation: animateCloud 60s linear infinite;
+    animation: animateCloud 55s linear infinite;
 }
 .cloud-wrapper4 {
     position: fixed;
@@ -247,13 +251,15 @@ footer {
 .cloud-wrapper5 {
     position: fixed;
     top: 18%;
+    left: -50%;
     transform: scale(.32);
-    animation: animateCloud 55s linear infinite;
+    animation: animateCloud 50s linear infinite;
+    animation-delay: 10s;
 }
 
 @keyframes animateCloud {
     0% {
-        left: -50vw;
+        left: -20vw;
     }
     100% {
         left: 100vw;
