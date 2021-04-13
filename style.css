@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(5deg, lightskyblue, lightblue);
+    color: whitesmoke;
+}
+
+main {
+    align-self: center;
+    padding: 2rem 3rem;
+    display: block;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: .2em;
+}
+
+h1 {
+    text-shadow: -40vw 44vh .25em #232323;
+}
+
+p {
+    color: #232323;
+    text-shadow: -40vw 44vh .25em #232323;
+}
+
+h1, p {
+    animation: broeierig 30s infinite, schaduw-broei 10s infinite;
+}
+
+h1:after {
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+footer {
+    background: linear-gradient(5deg, forestgreen, lightgreen);
+    height: 14vh;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 0 2em lightgreen;
+    z-index: -1;
+}
+
+.sun-wrapper {
+    display: block;
+    position: absolute;
+    right: 2em;
+    top: 1em;
+}
+
+@keyframes schaduw-broei {
+    0% {
+        text-shadow: -40vw 44vh .26em #232323;
+    }
+    50% {
+        text-shadow: -40vw 44vh .25em #232323;
+    }
+    100% {
+        text-shadow: -40vw 44vh .26em #232323;
+    }
+}
+
+@keyframes broeierig {
+    0% {
+        opacity: 98%;
+    }
+    5% {
+        opacity: 94%;
+    }
+    10% {
+        opacity: 99%;
+    }
+    15% {
+        opacity: 91%;
+    }
+    23% {
+        opacity: 94%;
+    }
+    46% {
+        opacity: 98%;
+    }
+    62% {
+        opacity: 91%;
+    }
+    69% {
+        opacity: 89%;
+    }
+    78% {
+        opacity: 100%;
+    }
+    89% {
+        opacity: 97%;
+    }
+    100% {
+        opacity: 97%;
+    }
+}
+
+@keyframes sunrolling {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.sun {
+    display: inline-flex;
+    position: relative;
+    margin: 30px;
+    width: 80px;
+    height: 80px;
+}
+
+.sun-face {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    text-align: center;
+    font-size: 1.5em;
+    color: #4E0404;
+}
+
+.sun-hlight {
+    position: absolute;
+    top: 0.6em;
+    right: 0.6em;
+    width: 0.35em;
+    height: 0.35em;
+    opacity: 0.8;
+    background: #fcf0a3;
+    border-radius: 0.35em;
+}
+
+.sun-anime {
+    width: 100%;
+    height: 100%;
+    animation: sunrolling 69s infinite;
+}
+
+.sun-ball {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background: #ffcf11;
+    background-image: radial-gradient(circle, #ffdf05, #fed65b);
+    box-shadow: 0 0 100px #ffdf05;
+}
+
+.sun-light {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    width: 2px;
+    height: 160%;
+}
+
+.sun-light b,
+.sun-light s {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%; /* 100*30/100=18.75 */
+    background: #fed65b;
+}
+
+.sun-light s {
+    top: auto;
+    bottom: 0;
+}
+
+.sun-light:nth-child(10n+2) {
+    transform: rotate(18deg);
+}
+
+.sun-light:nth-child(10n+3) {
+    transform: rotate(36deg);
+}
+
+.sun-light:nth-child(10n+4) {
+    transform: rotate(54deg);
+}
+
+.sun-light:nth-child(10n+5) {
+    transform: rotate(72deg);
+}
+
+.sun-light:nth-child(10n+6) {
+    transform: rotate(90deg);
+}
+
+.sun-light:nth-child(10n+7) {
+    transform: rotate(108deg);
+}
+
+.sun-light:nth-child(10n+8) {
+    transform: rotate(126deg);
+}
+
+.sun-light:nth-child(10n+9) {
+    transform: rotate(144deg);
+}
+
+.sun-light:nth-child(10n+10) {
+    transform: rotate(162deg);
+}
