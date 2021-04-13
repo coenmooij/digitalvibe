@@ -11,44 +11,35 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Roboto Mono', monospace;
-    background: linear-gradient(5deg, lightskyblue, lightblue);
+    background: linear-gradient(45deg, lightskyblue, lightcyan);
     color: whitesmoke;
 }
 
 main {
     align-self: center;
-    padding: 2rem 3rem;
     display: block;
     text-align: center;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: min(12vw, 6rem);
     margin-bottom: .2em;
-}
-
-h1 {
-    text-shadow: -40vw 44vh .25em #232323;
+    text-shadow: -1px -1px 2px #000,
+    1px -1px 2px #000,
+    -1px 1px 2px #000,
+    1px 1px 2px #000,
+    -40vw 44vh .35em #232323;
+    animation: broeierig .15s infinite, schaduw-broei 4s infinite reverse;
 }
 
 p {
+    animation: broeierig .15s infinite, schaduw-broei2 4s infinite reverse;
+    font-size: min(4vw, 2rem);
     color: #232323;
-    text-shadow: -40vw 44vh .25em #232323;
-}
-
-h1, p {
-    animation: broeierig 30s infinite, schaduw-broei 10s infinite;
-}
-
-h1:after {
-    text-shadow: -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
 }
 
 footer {
-    background: linear-gradient(5deg, forestgreen, lightgreen);
+    background: linear-gradient(6deg, forestgreen, lightgreen);
     height: 14vh;
     position: absolute;
     width: 100%;
@@ -66,49 +57,46 @@ footer {
 
 @keyframes schaduw-broei {
     0% {
-        text-shadow: -40vw 44vh .26em #232323;
+        text-shadow: -1px -1px 2px #000,
+        1px -1px 2px #000,
+        -1px 1px 2px #000,
+        1px 1px 2px #000,
+        -40vw 44vh .35em #232323;
     }
     50% {
-        text-shadow: -40vw 44vh .25em #232323;
+        text-shadow: -1px -1px 2px #000,
+        1px -1px 2px #000,
+        -1px 1px 2px #000,
+        1px 1px 2px #000,
+        calc(-40vw - 1px) 44vh .33em #232323;
     }
     100% {
-        text-shadow: -40vw 44vh .26em #232323;
+        text-shadow: -1px -1px 2px #000,
+        1px -1px 2px #000,
+        -1px 1px 2px #000,
+        1px 1px 2px #000,
+        -40vw 44vh .35em #232323;
+    }
+}
+
+@keyframes schaduw-broei2 {
+    0% {
+        text-shadow: -40vw 44vh .4em #232323;
+    }
+    100% {
+        text-shadow: calc(-40vw + 1px) 44vh .42em #232323;
     }
 }
 
 @keyframes broeierig {
     0% {
-        opacity: 98%;
-    }
-    5% {
-        opacity: 94%;
-    }
-    10% {
-        opacity: 99%;
-    }
-    15% {
-        opacity: 91%;
-    }
-    23% {
-        opacity: 94%;
-    }
-    46% {
-        opacity: 98%;
-    }
-    62% {
-        opacity: 91%;
-    }
-    69% {
-        opacity: 89%;
-    }
-    78% {
         opacity: 100%;
     }
-    89% {
+    50% {
         opacity: 97%;
     }
     100% {
-        opacity: 97%;
+        opacity: 100%;
     }
 }
 
