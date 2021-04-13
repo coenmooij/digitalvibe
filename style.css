@@ -242,12 +242,14 @@ footer {
     transform: scale(.56);
     animation: animateCloud 55s linear infinite;
 }
+
 .cloud-wrapper4 {
     position: fixed;
     top: 20%;
     transform: scale(.27);
     animation: animateCloud 45s linear infinite;
 }
+
 .cloud-wrapper5 {
     position: fixed;
     top: 18%;
